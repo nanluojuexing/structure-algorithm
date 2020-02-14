@@ -23,10 +23,13 @@ public class solution3 {
 
     public static int lengthOfLongestSubstring(String s) {
         int n = s.length();
-
+        // 记录没有重复的子串
         Set<Character> chr = new HashSet<Character>();
+        // 记录不重复的字符个数
         int ans =0;
+        // 索引位置
         int i=0;
+        // 索引位置
         int j=0;
 
         while(i<n && j<n){
@@ -40,4 +43,11 @@ public class solution3 {
         }
         return ans;
     }
+
+    /**
+     * 题解:
+     *
+     *
+     *
+     */
 }
