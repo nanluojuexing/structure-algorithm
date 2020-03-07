@@ -128,6 +128,10 @@ public class Array<E> {
         return data[index];
     }
 
+    public E getLast(){
+        return get(size-1);
+    }
+
     /**
      * 获得指定元素的索引 找到返回索引位置，找不到返回-1
      * @param e

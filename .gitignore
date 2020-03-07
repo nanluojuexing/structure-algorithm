@@ -22,10 +22,7 @@ Thumbs.db
 *.log
 /.idea/*
 *.iml
-algorithm/sorted/
 out/production/structureAlgorithm/.gitignore
 out/production/structureAlgorithm/META-INF/
-structure/queue/
-structure/stack/
 !/.idea/
 !/structureAlgorithm.iml
