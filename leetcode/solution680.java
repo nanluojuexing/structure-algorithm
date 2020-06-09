@@ -45,7 +45,7 @@ public class solution680 {
     }
 
     /**
-     * 解法2 双指针移动，匹配字符串
+     * 解法2 双指针移动，匹配字符串 官方题解
      * @param s
      * @return
      */
