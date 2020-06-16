@@ -28,13 +28,13 @@ public class seller_product {
 
         int[] prices = {2, 3, 1, 2, 4, 2};
         int[] prices2 = {1, 2, 3, 4, 5};
-        System.out.println(Arrays.toString(FinalDiscountedPrice(prices2)));
+        System.out.println(Arrays.toString(FinalDiscountedPrice(prices)));
     }
 
     public static int[] FinalDiscountedPrice(int[] prices) {
         // 定义数组接收结果
         int[] res = new int[prices.length];
-        // 存储对比的元素，记录对比的元素索引位置
+        // 存储对比的元素，记录对比的元素索引位置，记录价高的
         Stack<Integer> s = new Stack<>();
 
         for (int i = 0; i < prices.length; i++) {
@@ -42,6 +42,7 @@ public class seller_product {
         }
 
         for (int i = 0; i < prices.length; i++) {
+            // 第一个元素会直接入栈，后续的元素弹出，获取差值，res接收
             while (!s.isEmpty() && prices[s.peek()] >= prices[i]){
                 int index = s.pop();
                 res[index] = prices[index]-prices[i];
