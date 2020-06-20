@@ -1,4 +1,4 @@
-package algorithm.self;
+package dailyPractice;
 
 /**
  * 给定字符串str，写一个函数，去除str中连续重复的字符。

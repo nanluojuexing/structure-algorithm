@@ -1,4 +1,4 @@
-package algorithm.self;
+package dailyPractice;
 
 /**
  * 字符串 A(B(C(,),),E(,)) 转为二叉树

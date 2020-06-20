@@ -1,4 +1,4 @@
-package algorithm.self;
+package dailyPractice;
 
 import java.util.ArrayList;
 import java.util.List;
