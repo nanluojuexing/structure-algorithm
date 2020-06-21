@@ -1,4 +1,4 @@
-package algorithm.self;
+package algorithm.dailyPractice;
 
 import java.util.Arrays;
 import java.util.Stack;
