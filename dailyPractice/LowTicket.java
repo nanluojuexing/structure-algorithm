@@ -1,4 +1,4 @@
-package algorithm.dailyPractice;
+package dailyPractice;
 
 /**
  * 最低票价

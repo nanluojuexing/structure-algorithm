@@ -13,6 +13,10 @@ public class BubbleSort {
         int[] arr = {3,5,4,1,2,6};
         sort(arr,arr.length);
         System.out.println(Arrays.toString(arr));
+
+        int[] arr2={2,3,4,5,6,7,8,1};
+        sort4(arr2);
+        System.out.println(Arrays.toString(arr2));
     }
 
     /**
@@ -107,7 +111,38 @@ public class BubbleSort {
      * 鸡尾酒排序
      * @param arr
      */
-    public static void sort3(int[] arr){
+    public static void sort4(int[] arr){
+        int temp = 0;
+        for (int i = 0; i < arr.length/2; i++) {
+            // 有序标记,每一轮的初始值都是true
+            boolean isSorted = true;
+            for (int j =  i; j < arr.length-i-1 ; j++) {
+                if(arr[j]>arr[j+1]){
+                    temp = arr[j];
+                    arr[j]= arr[j+1];
+                    arr[j+1] = temp;
+                    // 存在元素交换,不是有序的，将标记改为false；
+                    isSorted = false;
+                }
+            }
+            if(isSorted){
+                break;
+            }
 
+            isSorted = true;
+
+            for (int j =  arr.length-i-1; j > i ; j--) {
+                if(arr[j]<arr[j-1]){
+                    temp = arr[j];
+                    arr[j]= arr[j-1];
+                    arr[j-1] = temp;
+                    // 存在元素交换,不是有序的，将标记改为false；
+                    isSorted = false;
+                }
+            }
+            if(isSorted){
+                break;
+            }
+        }
     }
 }
