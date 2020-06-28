@@ -1,4 +1,4 @@
-package algorithm.recall;
+package algorithm.recursion;
 
 /**
  * 背包问题
