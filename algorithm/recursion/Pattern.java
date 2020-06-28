@@ -1,4 +1,4 @@
-package algorithm.recall;
+package algorithm.recursion;
 
 /**
  * @Author: mianba
