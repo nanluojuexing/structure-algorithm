@@ -23,8 +23,11 @@ public class MagicStringNum {
         }
         // 移动指针
         int i =0;
+        // 处理奇数和偶数长度的问题
         int j = nums.length % 2 ==0 ? numStr.length() : numStr.length()-1;
+        // 定义临时变量
         char temp  = 0;
+        // 遍历双向移动指针
         while(i<=j){
             if(i % 2 !=0 && j % 2 !=0){
                 temp = nums[i];
@@ -34,7 +37,6 @@ public class MagicStringNum {
             i++;
             j--;
         }
-
         return Arrays.toString(nums);
     }
 }
