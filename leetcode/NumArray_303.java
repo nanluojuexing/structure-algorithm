@@ -50,8 +50,7 @@ public class NumArray_303 {
         for (int k = i; k <= j ; k++) {
             sum += nums[k];
         }
-
         return sum;
     }
-    
+
 }
