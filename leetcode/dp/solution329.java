@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.dp;
 
 /**
  * 矩阵中的最长；路径

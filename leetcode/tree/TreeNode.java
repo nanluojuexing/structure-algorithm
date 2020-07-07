@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.tree;
 
 /**
  * 二叉树的构造方法

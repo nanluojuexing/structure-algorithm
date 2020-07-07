@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.dp;
 
 /**
  * 最小路径和 动态规划

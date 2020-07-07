@@ -1,4 +1,6 @@
-package leetcode;
+package leetcode.listNode;
+
+import leetcode.listNode.ListNode;
 
 /**
  * 删除有序链表的重复节点

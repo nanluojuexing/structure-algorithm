@@ -1,4 +1,6 @@
-package leetcode;
+package leetcode.tree;
+
+import leetcode.tree.TreeNode;
 
 /**
  *  路径总和 III

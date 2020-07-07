@@ -1,4 +1,6 @@
-package leetcode;
+package leetcode.tree;
+
+import leetcode.tree.TreeNode;
 
 /**
  * @Author: mianba

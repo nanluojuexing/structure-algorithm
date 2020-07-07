@@ -1,4 +1,6 @@
-package leetcode;
+package leetcode.listNode;
+
+import leetcode.listNode.ListNode;
 
 /**
  * 合并K个排序链表

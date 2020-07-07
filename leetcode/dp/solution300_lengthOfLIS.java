@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.dp;
 
 /**
  * 最长上升序列 动态规划

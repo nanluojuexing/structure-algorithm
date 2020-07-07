@@ -1,4 +1,6 @@
-package leetcode;
+package leetcode.listNode;
+
+import leetcode.listNode.ListNode;
 
 /**
  * @Author: mianba

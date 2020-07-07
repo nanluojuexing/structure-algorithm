@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.listNode;
 
 /**
  * 单链表反转

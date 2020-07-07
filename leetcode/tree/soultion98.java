@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.tree;
 
 /**
  * 验证二叉树

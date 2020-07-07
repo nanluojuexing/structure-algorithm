@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.listNode;
 
 /**
  * 删除链表中等于给定值的元素
