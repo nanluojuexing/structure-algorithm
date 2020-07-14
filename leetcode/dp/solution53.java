@@ -58,7 +58,7 @@ public class solution53 {
         // 记录数组和
         int[] dp = new int[nums.length];
         dp[0] = nums[0];
-
+        // 记录最大的值
         int max = nums[0];
 
         for (int i = 1; i < nums.length; i++) {
