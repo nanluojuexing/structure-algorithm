@@ -10,10 +10,12 @@ import java.util.Arrays;
 public class MagicStringNum {
 
     public static void main(String[] args) {
-        System.out.println(reverse("123456"));
-        System.out.println(reverse("12345"));
+//        System.out.println(reverse("123456"));
+//        System.out.println(reverse("12345"));
         System.out.println(reverse("1234"));
-        System.out.println(reverse("1234567"));
+//        System.out.println(reverse("1234"));
+        System.out.println(reverse("123"));
+//        System.out.println(reverse("1234567"));
     }
     
     public static String reverse(String numStr){

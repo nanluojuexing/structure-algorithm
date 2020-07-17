@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.array;
 
 /**
  * 有序数组中的单一元素

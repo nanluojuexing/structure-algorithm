@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.string;
 
 /**
  * 查找字符串数组中的最长公共前缀,不存在公共前缀，返回空字符串 ""

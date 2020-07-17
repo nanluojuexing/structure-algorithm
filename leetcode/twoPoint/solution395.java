@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.twoPoint;
 
 import java.util.HashMap;
 
