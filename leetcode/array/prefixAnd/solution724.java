@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.array.prefixAnd;
 
 /**
  *
@@ -37,10 +37,41 @@ public class solution724 {
 
     public static void main(String[] args) {
 
+        int[] nums= {1, 7, 3, 6, 5, 6};
+        int[] nums2= {1, 2, 3};
+
+        System.out.println(pivotIndex(nums));
+        System.out.println(pivotIndex(nums2));
     }
 
-    public static int pivotIndex(int[] nums) {
+    /**
+     * 根据前缀和的方式解处
+     * 对于x元素，假设x元素左边的和为为A ，右侧的元素和为B，那么x元素满足的条件就是 A=B
+     *
+     * x右侧元素 之和可以更具A直接求出来，假设数组的元素和为 S  则 B 可以表示为 S-A-x
+     *  枢纽元素需要满足 A=B ，所以可以得到  A=B=S-A-x
+     *   可以推导出  2A +x = S,所以如果满足上述关系，就是枢纽元素
+     *
+     * @param nums
+     * @return
+     */
 
-        return 1;
+    public static int pivotIndex(int[] nums) {
+        int S  = 0;
+        for (int num : nums) {
+            S+=num;
+        }
+        // 定义前缀和 A
+        int A =0;
+        for (int i = 0; i < nums.length; i++) {
+            // 获得当前元素
+            int x = nums[i];
+            // 判断前缀和是否符合条件
+            if( 2*A+x == S ){
+                return  i;
+            }
+            A+=x;
+        }
+        return -1;
     }
 }
