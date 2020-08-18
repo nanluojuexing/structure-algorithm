@@ -18,6 +18,8 @@ package dailyPractice;
  * Input: m = 2, n = 36
  * Output: 8
  *
+ * 参考解题思路: https://zhuanlan.zhihu.com/p/92288604
+ *
  * @author mianba
  */
 public class DropEgg {
@@ -69,8 +71,7 @@ public class DropEgg {
             for (int j = 2; j <= n; ++j) {
                 dp[i][j] = Integer.MAX_VALUE;
                 for (int k = 1; k <= j; ++k) {
-                    dp[i][j] = Math.min(dp[i][j],
-                            1 + Math.max(dp[i - 1][k - 1], dp[i][j - k]));
+                    dp[i][j] = Math.min(dp[i][j], 1 + Math.max(dp[i - 1][k - 1], dp[i][j - k]));
                 }
             }
         }
