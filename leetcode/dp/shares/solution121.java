@@ -1,4 +1,4 @@
-package leetcode.dp;
+package leetcode.dp.shares;
 
 /**
  * 卖股票的最佳时机
