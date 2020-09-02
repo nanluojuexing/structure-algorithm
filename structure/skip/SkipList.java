@@ -93,20 +93,26 @@ public class SkipList {
      * @param value
      * @return
      */
-    public Integer add(int key,int value){
-        // q为新增节点，p 为存在的节点
+    public void put(int key,int value){
+        // 定义两个临时节点 : q为新增节点，p 为存在的节点
         SkipListEntry p , q;
         int i =0;
         // 查看适合插入的位置
         p = findEntry(key);
         // 如果跳跃表中存在对应的key,则直接修改对应的值就行了
         if(p.key == key){
-            Integer oldvalue = p.value;
             p.value = value;
-            return oldvalue;
+            return ;
         }
         // 如果跳跃表中不存在含有key值的节点，则进行新增操作，将节点插入 p节点的前面
         q = new SkipListEntry(key,value);
+                /* --------------------------------------------------------------
+        Insert q into the lowest level after SkipListEntry p:
+                         p   put q here           p        q
+                         |     |                  |        |
+	 	                 V     V                  V        V        V
+        Lower level:    [ ] <------> [ ]    ==>  [ ] <--> [ ] <--> [ ]
+        --------------------------------------------------------------- */
         q.left = p;
         q.right = p.right;
         p.right.left = q;
@@ -115,19 +121,19 @@ public class SkipList {
         //本层操作完毕，看更高层操作
         //抛硬币随机决定是否上层插入
         while(r.nextDouble() < 0.5 ){
-            // 已经是最顶层级
+            // 已经已经是最高层，需要新建一个顶层
             if(i >= h){
                 addEmptyLevel();
             }
-
+            // 将P移动到上一层
             while ( p.up == null ) {
                 p = p.left;
             }
 
             p = p.up;
-            /* ---------------------------------------------------
-            Add one more (k,*) to the column
-	        Schema for making the linkage:
+	/* ---------------------------------------------------
+          Add one more (k,*) to the column
+	   Schema for making the linkage:
                p <--> e(k,*) <--> p.right
                          ^
 		          |
@@ -152,7 +158,6 @@ public class SkipList {
         }
         // 更新链表长度
         n = n+1;
-        return null;
     }
 
     private void addEmptyLevel() {
@@ -195,31 +200,26 @@ public class SkipList {
         int i;
 
         SkipListEntry p;
-
 	     /* ----------------------------------
 		Record the position of each entry
 		---------------------------------- */
         p = head;
 
-        while ( p.down != null )
-        {
+        while ( p.down != null ) {
             p = p.down;
         }
 
         i = 0;
-        while ( p != null )
-        {
+        while ( p != null ) {
             p.pos = i++;
             p = p.right;
         }
-
 	     /* -------------------
 		Print...
 		------------------- */
         p = head;
 
-        while ( p != null )
-        {
+        while ( p != null ) {
             s = getOneRow( p );
             System.out.println(s);
 
@@ -237,8 +237,7 @@ public class SkipList {
         p = p.right;
 
 
-        while ( p != null )
-        {
+        while ( p != null ) {
             SkipListEntry q;
 
             q = p;
@@ -253,12 +252,9 @@ public class SkipList {
                 s = s + "--------";
 
             s = s + "> " + p.key;
-
             a = b;
-
             p = p.right;
         }
-
         return(s);
     }
 
@@ -269,13 +265,15 @@ public class SkipList {
         for (int i = 0; i < 10; i++ ) {
             int tmp = r.nextInt(100);
             System.out.println("add:"+tmp);
-            l.add( tmp,  tmp );
+            l.put( tmp,  tmp );
             l.printHorizontal();
         }
 
         System.out.println("over");
     }
 }
+
+
 class SkipListEntry{
 
     Integer key;

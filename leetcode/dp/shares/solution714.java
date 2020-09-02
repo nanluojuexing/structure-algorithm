@@ -1,5 +1,7 @@
 package leetcode.dp.shares;
 
+import org.junit.Test;
+
 /**
  * 股票问题
  *
@@ -27,4 +29,14 @@ package leetcode.dp.shares;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class solution714 {
+
+    @Test
+    public void test1(){
+
+    }
+
+    public int maxProfit(int[] prices, int fee) {
+
+        return 1;
+    }
 }
