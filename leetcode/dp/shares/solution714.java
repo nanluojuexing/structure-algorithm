@@ -24,19 +24,41 @@ import org.junit.Test;
  * 在此处卖出 prices[5] = 9
  * 总利润: ((8 - 1) - 2) + ((9 - 4) - 2) = 8
  *
- * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee
- * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class solution714 {
 
     @Test
     public void test1(){
+       int[] prices = {1, 3, 2, 8, 4, 9};
+       int fee = 2;
 
+        System.out.println(maxProfit(prices,fee));
     }
 
     public int maxProfit(int[] prices, int fee) {
-
-        return 1;
+        int cash = 0;
+        int hold = - prices[0];
+        for (int i = 1; i < prices.length; i++) {
+            cash = Math.max(cash, hold + prices[i] - fee);
+            hold = Math.max(hold, cash - prices[i]);
+        }
+        return Math.max(cash,hold);
     }
+
+    /**
+     * 这里需要维护两个变量
+     *  cash 当前不持有股票的时候最大利润
+     *  hold  持有股票时候的最大利润
+     *
+     *  第 i天 需要根据第 i-1  天的状态来更新 cash 和 hold 值，对于 cash
+     *  cash = max(cash，hold+price[i]-price[i-1])
+     *
+     *  hold 可以保持不变 ,或者买入这一天的股票，状态转移方程为
+     *  hold = max(hold,cash-price[i])
+     *
+     *  第i-1天卖出最大收益 vs 第i-1天买入最大收益+当天股价-手续费
+     *
+     *  第i-1天买入的最大收益 vs 第i-1天卖出的最大收益+当天股价
+     */
 }
