@@ -12,12 +12,12 @@ public class SkipListTest {
         }
         System.out.println(skipList);
 
-//        SkipList_2.Node node = skipList.find(11);
-//        if (node != null) {
-//            System.out.println(node);
-//        } else {
-//            System.out.println("not found");
-//        }
+        SkipList_2.Node node = skipList.find(11);
+        if (node != null) {
+            System.out.println(node);
+        } else {
+            System.out.println("not found");
+        }
 
 //        skipList.delete(11);
 //        System.out.println(skipList);

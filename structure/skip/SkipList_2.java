@@ -8,7 +8,7 @@ import java.util.Random;
 public class SkipList_2 {
 
     /**
-     * 索引的作最大层数
+     * 索引的最大层数
      */
     private static final int MAX_LEVEL = 16;
 
@@ -28,14 +28,22 @@ public class SkipList_2 {
      */
     private Random r ;
 
+    /**
+     * 构造方法
+     */
     public SkipList_2() {
         head = new Node();
         r = new Random();
     }
 
+    /**
+     * 查找对应的节点
+     * @param value
+     * @return
+     */
     public Node find(int value){
         Node p = head;
-        // 从最上层开始查找，如果下一跳的节点值大于等于要查找的值，切换到下一层继续查找，知直到第0层
+        // 从最上层级开始查找，如果下一跳的节点值大于等于要查找的值，切换到下一层继续查找，知直到第0层
         for (int i = levelCount-1 ; i>=0 ; --i){
             while(p.forwards[i] != null && p.forwards[i].data < value){
                 p = p.forwards[i];
@@ -51,22 +59,24 @@ public class SkipList_2 {
 
     /**
      * 往跳表中插入一跳数据
+     *
+     * forward[0]对应的是原链表里的下一跳，forward[1]是最后一层节点的下一跳位置，以此类推，也就是说访问head的forward[levelCount-1]表示第一层索引的头结点。head是一个头结点，它的forward里存的是原链表以及索引层的头结点
      */
     public void insert(int value){
         // 获取层数，通过随机数确定
         int level = randomLevel();
         // 定义新的节点
         Node newNode = new Node();
+        // 将value赋值给新的节点
         newNode.data= value;
-        // 制定节点的层级
+        // 指定节点的层级，随机获取的值
         newNode.maxLevel = level;
 
-        // 用以存储新节点所有层数上，各自的前一个节点的信息
+        // 用以存储新节点所有层数上，各自的前一个节点的信息，空节点的时候，每一层的前一个节点都是head
         Node[] update = new Node[level];
         for (int i = level-1; i >=0 ; i--) {
             update[i]= head;
         }
-
         // record every level largest value which smaller than insert value in update[]
         // 记录每一层最大的value值，该最大值小于插入 update[]的值
         // 从头节点开始寻找插入节点
@@ -77,6 +87,7 @@ public class SkipList_2 {
             while (p.forwards[i] != null && p.forwards[i].data < value) {
                 p = p.forwards[i];
             }
+            // use update save node in search path
             update[i] = p;
         }
         // in search path node next node become new node forwords(next)
@@ -86,7 +97,6 @@ public class SkipList_2 {
             newNode.forwards[i] = update[i].forwards[i];
             update[i].forwards[i] = newNode;
         }
-
         // 更新当前索引总层数
         if (levelCount < level) {
             levelCount = level;
@@ -154,9 +164,9 @@ public class SkipList_2 {
 
 
     public class Node {
+
         // 节点数据
         private int data = -1;
-
         /**
          * 保存当前结点的所有下一跳结点。用以存储该节点所有层的下一个节点的信息
          * forwards[i] 表示当前结点在第 i 层索引的下一跳结点，i in [0, maxLevel-1]
