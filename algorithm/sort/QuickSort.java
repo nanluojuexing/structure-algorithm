@@ -22,6 +22,8 @@ public class QuickSort {
     }
 
     /**
+     * 双边循环法
+     *
      * 选择一个基准元素,通常选择第一个元素或者最后一个元素,通过一趟扫描，将待排序列分成两部分,
      * 一部分比基准元素小,一部分大于等于基准元素,此时基准元素在其排好序后的正确位置,然后再用同样的方法递归地排序划分的两部分
      * @param arr
@@ -31,7 +33,7 @@ public class QuickSort {
     public void quickSort(int[] arr,int start,int end){
         int i = start,j = end;
         // 定义支点
-        //支点
+        //定义基准元素
         int pivot = arr[(start + end) / 2];
         //左右两端进行扫描，只要两端还没有交替，就一直扫描
         while (i <= j) {
@@ -57,5 +59,19 @@ public class QuickSort {
         //“右边”再做排序，直到右边剩下一个数(递归出口)
         if (i < end)
             quickSort(arr, i, end);
+    }
+
+    /**
+     * 单边循环法
+     */
+    public void quick_sort(){
+
+    }
+
+    /**
+     * 非递归方法
+     */
+    public void quick_sort_2(){
+
     }
 }
