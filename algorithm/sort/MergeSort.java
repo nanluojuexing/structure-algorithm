@@ -65,6 +65,16 @@ public class MergeSort {
             }
             k++;
         }
+        /**
+         * 下面的代码可以用这段替代
+         * while(s<=t){//将左边剩余元素填充进temp中
+         *      temp[k++] = arr[s++];
+         * }
+         * while(t<=r){//将右序列剩余元素填充进temp中
+         *     temp[k++] = arr[t++];
+         * }
+         */
+        /**************************/
         // 判断哪个子数组中有剩余的数据
         int start = s;
         int end = q;
@@ -76,6 +86,7 @@ public class MergeSort {
         while (start <= end) {
             temp[k++] = arr[start++];
         }
+        /**************************/
         // 将tmp中的数组拷贝回a[p...r]
         for (int i = 0; i <= r-p; ++i) {
             arr[p+i] = temp[i];
