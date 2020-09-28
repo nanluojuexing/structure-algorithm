@@ -56,7 +56,7 @@ public class searchMatrix {
         // 定义中间节点
         int mid;
         // 定义元素接收值
-        int num=0;
+        int num;
         // 循环遍历数组，通过二分法查找
         while(left <= right){
             // 确定中间元素的位置
