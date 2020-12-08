@@ -27,6 +27,7 @@ public class HeapSort {
             int temp = array[i];
             array[i]= array[0];
             array[0] = temp;
+
             downAdjust(array,0,i);
         }
     }

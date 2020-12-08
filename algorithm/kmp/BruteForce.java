@@ -2,6 +2,8 @@ package algorithm.kmp;
 
 /**
  * 暴力递归
+ *
+ * 字符串匹配
  */
 public class BruteForce {
 
