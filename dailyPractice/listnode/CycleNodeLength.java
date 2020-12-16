@@ -65,6 +65,11 @@ public class CycleNodeLength {
         return 0;
     }
 
+    /**
+     *
+     * @param head
+     * @return
+     */
     public int getCycleNodeValue(ListNode head){
         if(head == null){
             return 0;
