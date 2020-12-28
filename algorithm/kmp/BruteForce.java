@@ -26,7 +26,7 @@ public class BruteForce {
         char[] patternChars = pattern.toCharArray();
 
         while(i < sourceLen && j < patternLen){
-            // 当前自负匹配上，直接移动匹配下一个字符
+            // 当前字符匹配上，直接移动匹配下一个字符
             if(sourceChars[i] == patternChars[j]){
                 i++;
                 j++;
