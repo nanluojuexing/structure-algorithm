@@ -28,9 +28,7 @@ public class RepeatElementArray {
 
         for (int i = 0; i < arr.length-1; i++) {
             if(arr[i] > max) max = arr[i];
-
             if(arr[i]<min) min = arr[i];
-
         }
         // 创建新的数组
         int length = max-min;
