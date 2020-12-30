@@ -37,7 +37,7 @@ public class TimingWheel<E> {
     private final CopyOnWriteArrayList<ExpirationListener<E>> expirationListeners = new CopyOnWriteArrayList<ExpirationListener<E>>();
 
     /**
-     *
+     * 定义数组作为时间轮的基础结构
      */
     private final ArrayList<Slot<E>> wheel;
 
