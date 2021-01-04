@@ -1,4 +1,4 @@
-package dailyPractice;
+package dailyPractice.dp;
 
 /**
  * 丢鸡蛋 动态规划

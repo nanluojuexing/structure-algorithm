@@ -1,4 +1,4 @@
-package dailyPractice;
+package dailyPractice.array;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package dailyPractice;
+package dailyPractice.stack;
 
 import java.util.Arrays;
 import java.util.Stack;

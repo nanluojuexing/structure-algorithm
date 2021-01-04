@@ -1,6 +1,4 @@
-package leetcode.twoPoint;
-
-import java.util.HashMap;
+package leetcode.string.twoPoint;
 
 /**
  * @Author: mianba

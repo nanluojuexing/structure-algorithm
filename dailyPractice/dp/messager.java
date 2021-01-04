@@ -1,4 +1,4 @@
-package dailyPractice;
+package dailyPractice.dp;
 
 /**
  * 按摩师

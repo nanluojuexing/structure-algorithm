@@ -1,4 +1,4 @@
-package leetcode.palindromeString;
+package leetcode.string.palindromeString;
 
 /**
  * 回文子串

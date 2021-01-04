@@ -1,4 +1,4 @@
-package dailyPractice;
+package dailyPractice.tree;
 
 /**
  * 字符串 A(B(C(,),),E(,)) 转为二叉树

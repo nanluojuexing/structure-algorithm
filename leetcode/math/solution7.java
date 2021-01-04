@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.math;
 
 /**
  * 反转整数

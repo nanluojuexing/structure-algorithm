@@ -12,7 +12,13 @@ public class RepeatElementArray {
 
     @Test
     public void test2(){
-        int[] arr = {2,1,9,8,6,7,4};
+        int[] arr = {1,2,3,1};
+        System.out.println(duplicateElement(arr));
+    }
+
+    @Test
+    public void test3(){
+        int[] arr = {3,1};
         System.out.println(duplicateElement(arr));
     }
 
@@ -22,11 +28,14 @@ public class RepeatElementArray {
      * @return
      */
     public boolean duplicateElement(int[] arr){
+        if(arr.length==0){
+            return false;
+        }
         // 获取数组的最大值和最小值
         int min = arr[0];
         int max = arr[0];
 
-        for (int i = 0; i < arr.length-1; i++) {
+        for (int i = 0; i < arr.length; i++) {
             if(arr[i] > max) max = arr[i];
             if(arr[i]<min) min = arr[i];
         }
@@ -34,7 +43,7 @@ public class RepeatElementArray {
         int length = max-min;
         int[] buckets = new int[length+1];
         // 遍历数组
-        for (int i = 0; i < arr.length-1; i++) {
+        for (int i = 0; i < arr.length; i++) {
             // 计算数组索引位置
             int num = arr[i]-min;
             if(buckets[num] == 0){

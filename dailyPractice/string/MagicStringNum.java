@@ -1,4 +1,4 @@
-package dailyPractice;
+package dailyPractice.string;
 
 import java.util.Arrays;
 
