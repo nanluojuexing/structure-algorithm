@@ -2,6 +2,10 @@ package dailyPractice.array;
 
 import org.junit.Test;
 
+/**
+ * 给定一个整数数组，判断是否存在重复元素。
+ * 如果任意一值在数组中出现至少两次，函数返回 true 。如果数组中每个元素都不相同，则返回false 。
+ */
 public class RepeatElementArray {
 
     @Test
@@ -23,7 +27,12 @@ public class RepeatElementArray {
     }
 
     /**
-     * 利用桶排思想解决
+     * 利用桶排思想解决，
+     * 1. 取数组最大值和最小值，然后创建差值的数量的桶
+     * 2. 遍历数组，将数组元素，放入对应的桶位，遇到相同的元素+1
+     * 3. 最后遍历桶数组，如果有存在大于等于2的，说明对应的桶存在重复的元素，即数组中又重复元素
+     *
+     * 事件复杂度O(n),空间复杂度O(n)
      * @param arr
      * @return
      */
