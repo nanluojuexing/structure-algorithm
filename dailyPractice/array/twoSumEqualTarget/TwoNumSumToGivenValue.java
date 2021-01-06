@@ -1,4 +1,4 @@
-package dailyPractice.array;
+package dailyPractice.array.twoSumEqualTarget;
 
 import org.junit.Test;
 
