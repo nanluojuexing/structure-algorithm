@@ -1,4 +1,4 @@
-package dailyPractice.string;
+package leetcode.string;
 
 import org.junit.Test;
 
@@ -15,7 +15,7 @@ import org.junit.Test;
  *
  * 对比到最后，中间的 e 和 a 不相等，因此不是一个回文字符串，返回 false
  */
-public class PalindromicString {
+public class PalindromicString_371 {
 
     @Test
     public void test1(){
