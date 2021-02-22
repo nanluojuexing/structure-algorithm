@@ -1,4 +1,4 @@
-package dailyPractice.array.twoSumEqualTarget;
+package leetcode.array;
 
 import org.junit.Test;
 
@@ -15,7 +15,7 @@ import java.util.Map;
  *
  * 目标值是 10。那么，满足条件的两个整数是，2 和 8，它们的和是 10。所以你要返回它们的下标是 1 和 4
  */
-public class TwoNumSumToTarget {
+public class TwoNumSumToTarget_1 {
 
     @Test
     public void test1(){

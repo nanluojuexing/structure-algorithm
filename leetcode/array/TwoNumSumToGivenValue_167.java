@@ -14,7 +14,7 @@ import java.util.Arrays;
  *
  * 目标值是 10。那么，满足条件的两个整数是，2 和 8，它们的和是 10。所以你要返回它们的下标是 [2, 5]。
  */
-public class TwoNumSumToGivenValue_1 {
+public class TwoNumSumToGivenValue_167 {
 
     @Test
     public void test(){
