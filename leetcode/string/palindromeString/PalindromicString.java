@@ -1,4 +1,4 @@
-package leetcode.string;
+package leetcode.string.palindromeString;
 
 import org.junit.Test;
 
@@ -15,7 +15,7 @@ import org.junit.Test;
  *
  * 对比到最后，中间的 e 和 a 不相等，因此不是一个回文字符串，返回 false
  */
-public class PalindromicString_371 {
+public class PalindromicString {
 
     @Test
     public void test1(){
@@ -28,8 +28,8 @@ public class PalindromicString_371 {
     }
 
     /**
-     * 判断字符是不是字符活着数字
-     * @param s
+     * 判断字符是不是字符或着数字
+     * @param c
      * @return
      */
     private boolean isAllphanumeric(char c){
