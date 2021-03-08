@@ -32,13 +32,3 @@ public class soultion98 {
     }
 }
 
-
-class TreeNode98 {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode98(int x) {
-        val = x;
-    }
-}
