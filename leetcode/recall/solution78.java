@@ -1,4 +1,4 @@
-package leetcode.array;
+package leetcode.recall;
 
 import java.util.ArrayList;
 import java.util.Arrays;
