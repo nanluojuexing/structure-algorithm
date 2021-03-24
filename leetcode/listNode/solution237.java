@@ -1,6 +1,5 @@
 package leetcode.listNode;
 
-import leetcode.listNode.ListNode;
 
 /**
  * 删除链表中的节点

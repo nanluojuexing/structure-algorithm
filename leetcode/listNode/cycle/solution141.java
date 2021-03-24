@@ -1,5 +1,6 @@
-package leetcode.listNode;
+package leetcode.listNode.cycle;
 
+import leetcode.listNode.ListNode;
 import org.junit.Test;
 
 /**

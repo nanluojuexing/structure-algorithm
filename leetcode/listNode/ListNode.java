@@ -6,12 +6,11 @@ package leetcode.listNode;
  * @Description: 链表构造方法
  */
 public class ListNode{
-
     int val;
 
-    ListNode next;
+    public ListNode next;
 
-    ListNode(int x){
+    public ListNode(int x){
         val = x;
     }
 

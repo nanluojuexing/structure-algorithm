@@ -1,4 +1,6 @@
-package leetcode.listNode;
+package leetcode.listNode.reverse;
+
+import leetcode.listNode.ListNode;
 
 /**
  * 单链表反转
