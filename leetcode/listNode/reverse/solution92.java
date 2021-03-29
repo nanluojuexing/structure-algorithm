@@ -36,6 +36,13 @@ public class solution92 {
         System.out.println(reverseBetween(head,2,4).toString());
     }
 
+    // 如果设计开闭区间的只需要控制边界条件就可以
+    @Test
+    public void test2(){
+        ListNode head = new ListNode(new int[]{1,2,3,4,5});
+        System.out.println(reverseBetween(head,2,4).toString());
+    }
+
     public ListNode reverseBetween(ListNode head, int m, int n) {
         // 定义临时节点
         ListNode dummyHead = new ListNode(-1);
