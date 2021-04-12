@@ -25,9 +25,15 @@ public class solution647 {
         //String a ="abc";
         //System.out.println(countSubstrings(a));
         String b ="aaa";
-        System.out.println(countSubstrings2(b));
+        System.out.println(countSubstrings(b));
+        System.out.println(countPalindromicSubstringsDP(b));
     }
 
+    /**
+     * 暴力解法
+     * @param s
+     * @return
+     */
     public static int countSubstrings(String s){
         //字符串长度
         int n = s.length();
@@ -77,5 +83,39 @@ public class solution647 {
             count++;
         }
         return  count;
+    }
+
+    /**
+     * 动态规划
+     */
+    public static int countPalindromicSubstringsDP(String s){
+        // 校验参数
+        if(s == null || s.length() == 0){
+            return 0;
+        }
+
+        int n = s.length(),count = 0;
+        // 定义二维数组记录字符串状态
+        boolean[][] d = new boolean[n][n];
+
+        for (int i = n-1; i >= 0; i--) {
+            for (int j = i; j < n; j++) {
+                // 当 i = j 时，只有一个字符，肯定为回文字符串
+                if( i == j ){
+                    d[i][j] = true;
+                    // 当 i+1 = j 是为两个字符，如果两个字符相等，则为回文字符串
+                }else if ( i+1 == j){
+                    d[i][j] = s.charAt(i)==s.charAt(j);
+                }else{ // 当不相邻的时候，需要处理中间字串是否为回文字串
+                    d[i][j] = s.charAt(i) == s.charAt(j) && d[i+1][j-1];
+                }
+                // 统计回文字符串个数
+                if(d[i][j]){
+                    count++;
+                }
+            }
+        }
+
+      return count;
     }
 }
