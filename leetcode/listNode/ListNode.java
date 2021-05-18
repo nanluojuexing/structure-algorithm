@@ -6,7 +6,7 @@ package leetcode.listNode;
  * @Description: 链表构造方法
  */
 public class ListNode{
-    int val;
+    public int val;
 
     public ListNode next;
 
