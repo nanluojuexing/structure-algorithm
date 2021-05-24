@@ -2,7 +2,10 @@ package swordoffer;
 
 import org.junit.Test;
 
-public class findRepeatNumber {
+/**
+ * 数组中重复的数字
+ */
+public class FindRepeatNumber {
 
     @Test
     public void test(){
