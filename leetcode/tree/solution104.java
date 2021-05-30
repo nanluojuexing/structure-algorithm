@@ -17,8 +17,7 @@ public class solution104 {
         if(root==null){
             return 0;
         }
-        int  result = Math.max( maxDepth(root.left),maxDepth(root.right) )+1;
-        return result;
+        return Math.max( maxDepth(root.left),maxDepth(root.right) )+1;
     }
 }
 
