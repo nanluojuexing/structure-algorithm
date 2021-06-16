@@ -3,6 +3,9 @@ package swordoffer;
 import leetcode.listNode.ListNode;
 import org.junit.Test;
 
+/**
+ * 删除链表中指定元素
+ */
 public class DeleteNode {
 
     @Test

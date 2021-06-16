@@ -4,6 +4,9 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
+/**
+ * 奇数交换
+ */
 public class ExchangeArray {
 
     @Test

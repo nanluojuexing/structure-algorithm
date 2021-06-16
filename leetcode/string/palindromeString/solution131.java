@@ -1,6 +1,5 @@
 package leetcode.string.palindromeString;
 
-import jdk.nashorn.internal.ir.CallNode;
 import org.junit.Test;
 
 import java.util.ArrayList;
