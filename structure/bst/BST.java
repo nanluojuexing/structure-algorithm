@@ -133,7 +133,7 @@ public class BST<E extends Comparable> {
 
     /**
      * 前序遍历，以node为根节点，先访问当前节点，再依次递归访问左右子树
-     *
+     *  根左右
      * 深度优先遍历
      * @param node
      */
@@ -157,10 +157,12 @@ public class BST<E extends Comparable> {
             Node cur = stack.pop();
             System.out.println(cur.e);
 
-            if(cur.right != null)
+            if(cur.right != null) {
                 stack.push(cur.right);
-            if(cur.left != null)
+            }
+            if(cur.left != null) {
                 stack.push(cur.left);
+            }
         }
     }
 
@@ -173,6 +175,8 @@ public class BST<E extends Comparable> {
 
     /**
      * 二分搜索树 中序遍历，以node为根节点，先递归访问左子树，再访问自身，再递归访问右子树
+     *
+     * 左根右
      * @param node
      */
     public void inOrder(Node node){
@@ -196,6 +200,8 @@ public class BST<E extends Comparable> {
     /**
      * 后序遍历以node为根的二分搜索树, 递归算法
      * 先递归访问左右子树，最后再访问当前节点
+     *
+     * 左右根
      *
      * 深度优先遍历
      * @param node
@@ -313,8 +319,9 @@ public class BST<E extends Comparable> {
      * 寻找二分搜索树的最大节点元素
      */
     public E maximum(){
-        if(size == 0)
+        if(size == 0) {
             throw new IllegalArgumentException("BST is empty!");
+        }
         return maximum(root).e;
     }
     /**
@@ -622,16 +629,18 @@ public class BST<E extends Comparable> {
 
     private String generateDepthString(int depth){
         StringBuilder res = new StringBuilder();
-        for(int i = 0 ; i < depth ; i ++)
+        for(int i = 0 ; i < depth ; i ++) {
             res.append("--");
+        }
         return res.toString();
     }
 
     public static void main(String[] args) {
         BST<Integer> bst = new BST<>();
         int[] nums = {5, 3, 6, 8, 4, 2};
-        for(int num: nums)
+        for(int num: nums) {
             bst.add(num);
+        }
 
         bst.preOrder();
         System.out.println();
