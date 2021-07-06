@@ -21,7 +21,7 @@ import java.util.List;
  *
  * 链接：https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof
  */
-public class leftRotateString {
+public class LeftRotateString {
 
     @Test
     public void test(){
