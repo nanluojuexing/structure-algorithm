@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 二叉搜索树的第k大节点
  */
-public class KthLargest {
+public class KthLargestBST {
 
     @Test
     public void test(){
